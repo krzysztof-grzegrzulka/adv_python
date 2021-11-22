@@ -32,6 +32,7 @@ class Flat(Property):
                f'{self.address}. Znajduje się w nim {self.rooms} pokoi. ' +
                f'Wartość to {self.price}. Jest na piętrze {self.floor}.')
 
+
 house = House('osiedle mieszkaniowe', 2, '250000', 'Czerwona 3', '1000')
 flat = Flat('apartamentowiec', 3, '500000', 'Niebieska 3a/12', '10')
 
