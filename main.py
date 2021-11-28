@@ -1,11 +1,21 @@
-import classes.Book as Book
-import classes.Employee as Employee
-import classes.Flat as Flat
-import classes.House as House
-import classes.Library as Library
-import classes.Order as Order
+from classes.Book import Book
+# import classes.Book as Book
+from classes.Employee import Employee
+# import classes.Employee as Employee
+from classes.Flat import Flat
+# import classes.Flat as Flat
+from classes.House import House
+# import classes.House as House
+from classes.Library import Library
+# import classes.Library as Library
+from classes.Order import Order
+# import classes.Order as Order
+from classes.Property import Property
 import classes.Property as Property
-import classes.Student as Student
+from classes.Student import Student
+
+# import classes.Student as Student
+
 
 # Zadanie 1
 student1 = Student("Jan", 65)
@@ -35,12 +45,9 @@ employee3 = Employee('Marian', 'Milusi', '24-05-1990', '10-10-1950',
                      'Dąbrowa Górnicza', 'Aleja Zwycięstwa 50a/4d', '39-666',
                      '554-332-335')
 
-student1 = Student('Stefan Wysoki', '12-12-1998', 'Katowice',
-                   'Główna 10/55', '40-654', '778-556-326')
-student2 = Student('Arleta Kominiarz', '04-06-1999', 'Oświęcim', 'Zimna 33',
-                   '42-601', '345-235-678')
-student3 = Student('Sławomira Pochopna', '20-08-1999', 'Milówka',
-                   'Głośna 345', '30-776', '220-732-356')
+student1 = Student('Stefan Wysoki', '55')
+student2 = Student('Arleta Kominiarz', '76')
+student3 = Student('Sławomira Pochopna', '24')
 
 # order1
 # order2

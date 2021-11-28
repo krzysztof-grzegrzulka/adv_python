@@ -1,5 +1,7 @@
-import classes.Student as Student
-import classes.Employee as Employee
+# import classes.Student as Student
+# import classes.Employee as Employee
+from classes.Student import Student
+from classes.Employee import Employee
 
 
 class Order(Student, Employee):

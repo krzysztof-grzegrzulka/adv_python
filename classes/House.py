@@ -1,4 +1,5 @@
-import classes.Property as Property
+# import classes.Property as Property
+from classes.Property import Property
 
 
 class House(Property):

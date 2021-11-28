@@ -1,4 +1,5 @@
-import classes.Library as Library
+# import classes.Library as Library
+from classes.Library import Library
 
 
 class Book(Library):
