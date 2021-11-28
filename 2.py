@@ -20,8 +20,8 @@ class Library:
 
     def __str__(self):
         return (f'Biblioteka w mieście {self._city}, kod: {self._zip_code}, ' +
-                f'o adresie {self._street}. Godziny otwarcie: {self._open_hours}. ' +
-                f'Telefon: {self._phone}')
+                f'o adresie {self._street}. Godziny otwarcie: ' +
+                f'{self._open_hours}. Telefon: {self._phone}')
 
 
 class Employee:
@@ -51,8 +51,8 @@ class Order(Student, Employee):
         self._order_date = order_date
 
     def __str__(self) -> str:
-        return (f'Zamówenie złożone dla {self.student} przez {self.employee} ' +
-                f'na książki: {self._books}, dnia {self._order_date}')
+        return (f'Zamówenie złożone dla {self.student} przez {self.employee}' +
+                f' na książki: {self._books}, dnia {self._order_date}')
 
 
 class Book(Library):
@@ -65,9 +65,9 @@ class Book(Library):
         self._number_of_pages = number_of_pages
 
     def __str__(self):
-        return(f'Książka z {self.library} napisana przez {self._author_name} ' +
-               f'{self._author_surname}. Wydano ją {self._publication_date}. ' +
-               f'Ma {self._number_of_pages} stron.')
+        return(f'Książka z {self.library} napisana przez {self._author_name}' +
+               f' {self._author_surname}. Wydano ją {self._publication_date}' +
+               f'. Ma {self._number_of_pages} stron.')
 
 
 library1 = Library('Katowice', 'Książkowa 10', '40-555', '07:00-19:00',
@@ -83,13 +83,14 @@ library2 = Library('Mikołów', 'Piękna 2d', '40-234', '08:00-19:00',
 
 employee1 = Employee('Jan', 'Kowalski', '01-02-2005', '03-10-1975', 'Katowice',
                      'Jasna 33/2', '40-678', '222-222-333')
-employee2 = Employee('Janina', 'Nowak', '20-12-2010', '12-07-1990', 'Sosnowiec',
-                     'Ciemna 12', '41-688', '100-200-444')
+employee2 = Employee('Janina', 'Nowak', '20-12-2010', '12-07-1990',
+                     'Sosnowiec', 'Ciemna 12', '41-688', '100-200-444')
 employee3 = Employee('Marian', 'Milusi', '24-05-1990', '10-10-1950',
-                     'Dąbrowa Górnicza', 'Aleja Zwycięstwa 50a/4d', '39-666', '554-332-335')
+                     'Dąbrowa Górnicza', 'Aleja Zwycięstwa 50a/4d', '39-666',
+                     '554-332-335')
 
-student1 = Student('Stefan', 'Wysoki', '12-12-1998', 'Katowice', 'Główna 10/55',
-                   '40-654', '778-556-326')
+student1 = Student('Stefan', 'Wysoki', '12-12-1998', 'Katowice',
+                   'Główna 10/55', '40-654', '778-556-326')
 student2 = Student('Arleta', 'Kominiarz', '04-06-1999', 'Oświęcim', 'Zimna 33',
                    '42-601', '345-235-678')
 student3 = Student('Sławomira', 'Pochopna', '20-08-1999', 'Milówka',

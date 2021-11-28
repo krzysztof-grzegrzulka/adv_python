@@ -19,7 +19,7 @@ class House(Property):
     def __str__(self) -> str:
         return(f'Dom znajduje się na {self._area}, adres: ' +
                f'{self._address}. Znajduje się w nim {self._rooms} pokoi. ' +
-               f'Wartość to {self._price}. Działka ma rozmiar {self._plot} m2.')
+               f'Wartość to {self._price}. Działka ma rozmiar {self._plot}m2.')
 
 
 class Flat(Property):
