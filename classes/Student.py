@@ -9,10 +9,3 @@ class Student:
             return True
         else:
             return False
-
-
-student1 = Student("Jan", 65)
-student2 = Student("Janina", 40)
-
-print(student1.is_passed)
-print(student2.is_passed)
