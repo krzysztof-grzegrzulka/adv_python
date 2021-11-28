@@ -1,8 +1,7 @@
 class Student:
-    def __init__(self, first_name, last_name, birth_date, city, street,
+    def __init__(self, name, birth_date, city, street,
                  zip_code, phone):
-        self._first_name = first_name
-        self._last_name = last_name
+        self._name = name
         self._birth_date = birth_date
         self._city = city
         self._street = street
@@ -44,28 +43,30 @@ class Employee:
 
 
 class Order(Student, Employee):
-    def __init__(self, employee, student, books, order_date):
-        self.employee = employee  # pochodzi z Employee
-        self.student = student  # pochodzi ze Student
+    def __init__(self, first_name, last_name, name, books, order_date):
+        super().__init__(first_name, last_name, name)
         self._books = books
         self._order_date = order_date
 
     def __str__(self) -> str:
-        return (f'Zamówenie złożone dla {self.student} przez {self.employee}' +
-                f' na książki: {self._books}, dnia {self._order_date}')
+        return (f'Zamówenie złożone dla {self.name} przez {self.first_name}' +
+                f' {self.last_name} na książki: {self._books}, dnia' +
+                f' {self._order_date}')
 
 
 class Book(Library):
-    def __init__(self, library, publication_date, author_name, author_surname,
+    def __init__(self, city, street, zip_code, open_hours, phone,
+                 publication_date, author_name, author_surname,
                  number_of_pages):
-        self.library = library  # pochodzi z Library
+        super().__init__(city, street, zip_code, open_hours, phone)
         self._publication_date = publication_date
         self._author_name = author_name
         self._author_surname = author_surname
         self._number_of_pages = number_of_pages
 
     def __str__(self):
-        return(f'Książka z {self.library} napisana przez {self._author_name}' +
+        return(f'Książka z biblioteki w {self.city} na ulicy {self.street}' +
+               f' napisana przez {self._author_name}' +
                f' {self._author_surname}. Wydano ją {self._publication_date}' +
                f'. Ma {self._number_of_pages} stron.')
 
@@ -75,7 +76,8 @@ library1 = Library('Katowice', 'Książkowa 10', '40-555', '07:00-19:00',
 library2 = Library('Mikołów', 'Piękna 2d', '40-234', '08:00-19:00',
                    '333-222-111')
 
-# book1
+book1 = Book('Katowice', 'Książkowa 10', '40-555', '07:00-19:00',
+             '111-222-333', '12-12-2000', 'Adam', 'Mickiewicz', '450')
 # book2
 # book3
 # book4
@@ -89,11 +91,11 @@ employee3 = Employee('Marian', 'Milusi', '24-05-1990', '10-10-1950',
                      'Dąbrowa Górnicza', 'Aleja Zwycięstwa 50a/4d', '39-666',
                      '554-332-335')
 
-student1 = Student('Stefan', 'Wysoki', '12-12-1998', 'Katowice',
+student1 = Student('Stefan Wysoki', '12-12-1998', 'Katowice',
                    'Główna 10/55', '40-654', '778-556-326')
-student2 = Student('Arleta', 'Kominiarz', '04-06-1999', 'Oświęcim', 'Zimna 33',
+student2 = Student('Arleta Kominiarz', '04-06-1999', 'Oświęcim', 'Zimna 33',
                    '42-601', '345-235-678')
-student3 = Student('Sławomira', 'Pochopna', '20-08-1999', 'Milówka',
+student3 = Student('Sławomira Pochopna', '20-08-1999', 'Milówka',
                    'Głośna 345', '30-776', '220-732-356')
 
 # order1
