@@ -1,6 +1,6 @@
 class KlientDetaliczny():
-    def __init__(self, id_kl_det: str, imie: str, nazwisko: str, adres_kl_det: str,
-                 nr_tel_kl_det: str):
+    def __init__(self, id_kl_det: str, imie: str, nazwisko: str,
+                 adres_kl_det: str, nr_tel_kl_det: str):
         self._id_kl_det = id_kl_det
         self._imie = imie
         self._nazwisko = nazwisko
@@ -28,6 +28,6 @@ class KlientDetaliczny():
         return self._nr_tel_kl_det
 
     def __str__(self) -> str:
-        return (f'Klient detaliczny o ID {self.id_kl_det} nazywa się {self.imie}' +
-                f' {self.nazwisko}. Mieszka na {self.adres_kl_det}. Nr ' +
-                f'telefonu {self.nr_tel_kl_det}')
+        return (f'Klient detaliczny o ID {self.id_kl_det} nazywa się ' +
+                f'{self.imie} {self.nazwisko}. Mieszka na ' +
+                f'{self.adres_kl_det}. Nr telefonu {self.nr_tel_kl_det}')
