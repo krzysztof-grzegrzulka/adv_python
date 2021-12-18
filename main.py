@@ -29,7 +29,8 @@ class Movie(Resource):
     # def __str__(self):
     def get(self, movieid_c, title_c, genres_c):
         # return json.dumps(dict(self), ensure_ascii=False)
-        return json.dumps({'movieid': movieid_c, 'title': title_c, 'genres': genres_c})
+        return json.dumps({'movieid': movieid_c, 'title': title_c,
+                           'genres': genres_c})
 
 
 class HelloWorld(Resource):
