@@ -30,6 +30,13 @@ class Movie(Resource):
         return json.dumps(dict(self), ensure_ascii=False)
 
 
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+
+api.add_resource(HelloWorld, '/')
+
 movies_list = []
 
 with open('source_files/movies.csv', newline='') as movies_csv:
