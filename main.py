@@ -35,8 +35,6 @@ class HelloWorld(Resource):
         return {'hello': 'world'}
 
 
-api.add_resource(HelloWorld, '/')
-
 movies_list = []
 
 with open('source_files/movies.csv', newline='') as movies_csv:
@@ -47,6 +45,7 @@ with open('source_files/movies.csv', newline='') as movies_csv:
         movies_list.append(Movie(movieId, title, genres))
 
 api.add_resource(Movie, '/movies')
+api.add_resource(HelloWorld, '/')
 
 # def iter_func(string=movies_str):
 #     return iter(string.splitlines())
