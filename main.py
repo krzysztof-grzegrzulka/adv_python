@@ -4,7 +4,8 @@ import tempfile
 from PIL import Image
 
 pytesseract.pytesseract.tesseract_cmd = \
-    r'C:\Program Files\Tesseract-OCR\tesseract'
+    r'/opt/homebrew/bin/tesseract'
+    # r'C:\Program Files\Tesseract-OCR\tesseract'
 
 
 def ocr_from_image(img_path):
