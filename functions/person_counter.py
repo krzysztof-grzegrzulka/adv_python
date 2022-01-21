@@ -63,7 +63,8 @@ def person_counter(img_file_path):
     # koniec obliczania czasu przetwarzania
     end = time.time()
 
-    print('Liczba wykrytych osob: ', len(indexes), '\nczas obrobki: ', end - start)
+    print('Liczba wykrytych osob: ', len(indexes),
+          '\nczas obrobki: ', end - start)
     cv2.imshow("Image", img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
