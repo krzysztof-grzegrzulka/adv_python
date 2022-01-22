@@ -13,7 +13,6 @@ def person_counter(img_file_path):
 
     yolo_weight = "models/yolov3.weights"  # yolov3-608
     yolo_config = "models/yolov3.cfg"
-    coco_labels = "models/coco.names"
     net = cv2.dnn.readNet(yolo_weight, yolo_config)
 
     # poczatek obliczania czasu przetwarzania
